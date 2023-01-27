@@ -21,6 +21,11 @@ class AccountPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Container(
+                    clipBehavior: Clip.antiAlias,
+                    child: Image.asset(
+                      "lib/assets/user1.jpg",
+                      fit: BoxFit.cover,
+                    ),
                     margin: EdgeInsets.all(15),
                     height: 100,
                     width: 100,
@@ -171,10 +176,22 @@ class AccountPage extends StatelessWidget {
               // Stories
               Row(
                 children: [
-                  StoriesIcon(user: "Hello world"),
-                  StoriesIcon(user: "Hello world"),
-                  StoriesIcon(user: "Hello world"),
-                  StoriesIcon(user: "Hello world"),
+                  StoriesIcon(
+                    user: "Hello world",
+                    storyImage: "lib/assets/user1.jpg",
+                  ),
+                  StoriesIcon(
+                    user: "Hello world",
+                    storyImage: "lib/assets/user5.jpg",
+                  ),
+                  StoriesIcon(
+                    user: "Hello world",
+                    storyImage: "lib/assets/post3.jpg",
+                  ),
+                  StoriesIcon(
+                    user: "Hello world",
+                    storyImage: "lib/assets/post2.jpg",
+                  ),
                 ],
               ),
 

@@ -10,12 +10,27 @@ class HomePageTwo extends StatelessWidget {
     "Anu",
     "DARA",
     "Shobe",
-    "Danji"
-        "Doju",
+    "Danji",
+    "Doju",
     "RAMI",
     "Trudo",
     "Oba",
     "Duro",
+  ];
+
+  List storyImages = [
+    "lib/assets/user1.jpg",
+    "lib/assets/user2.jpg",
+    "lib/assets/user3.jpg",
+    "lib/assets/user44.jpg",
+    "lib/assets/user5.jpg",
+    "lib/assets/post1.jpg",
+    "lib/assets/post2.jpg",
+    "lib/assets/post3.jpg",
+    "lib/assets/post4.jpg",
+    "lib/assets/user1.jpg",
+    "lib/assets/user2.jpg",
+    "lib/assets/user3.jpg",
   ];
   @override
   Widget build(BuildContext context) {
@@ -41,11 +56,12 @@ class HomePageTwo extends StatelessWidget {
           Container(
             height: 70,
             child: ListView.builder(
-              itemCount: users.length,
+              itemCount: users.length - 2,
               scrollDirection: Axis.horizontal,
               itemBuilder: (context, index) {
                 return StoriesIcon(
                   user: users[index],
+                  storyImage: storyImages[index],
                 );
               },
             ),

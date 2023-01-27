@@ -1,6 +1,32 @@
 import 'package:flutter/material.dart';
 
 class SearchPage extends StatelessWidget {
+  List storyImages = [
+    "lib/assets/post3.jpg",
+    "lib/assets/post4.jpg",
+    "lib/assets/user1.jpg",
+    "lib/assets/user2.jpg",
+    "lib/assets/user3.jpg",
+    "lib/assets/user5.jpg",
+    "lib/assets/user2.jpg",
+    "lib/assets/user3.jpg",
+    "lib/assets/post3.jpg",
+    "lib/assets/post4.jpg",
+    "lib/assets/post5.jpg",
+    "lib/assets/user2.jpg",
+    "lib/assets/user3.jpg",
+    "lib/assets/user1.jpg",
+    "lib/assets/user2.jpg",
+    "lib/assets/user3.jpg",
+    "lib/assets/post3.jpg",
+    "lib/assets/post4.jpg",
+    "lib/assets/post1.jpg",
+    "lib/assets/user2.jpg",
+    "lib/assets/user3.jpg",
+    "lib/assets/user1.jpg",
+    "lib/assets/user2.jpg",
+    "lib/assets/user3.jpg",
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,11 +53,15 @@ class SearchPage extends StatelessWidget {
           ),
           Expanded(
             child: GridView.builder(
-              itemCount: 30,
+              itemCount: storyImages.length,
               gridDelegate:
                   SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),
               itemBuilder: (context, index) {
                 return Container(
+                  child: Image.asset(
+                    storyImages[index],
+                    fit: BoxFit.cover,
+                  ),
                   height: 70,
                   width: 70,
                   color: Colors.grey.shade300,
