@@ -13,8 +13,10 @@ class Post extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      constraints: BoxConstraints(maxWidth: 500),
       margin: EdgeInsets.only(bottom: 30),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
             children: [
@@ -62,7 +64,63 @@ class Post extends StatelessWidget {
               Icon(Icons.bookmark),
               SizedBox(width: 5),
             ],
-          )
+          ),
+          SizedBox(height: 10),
+          RichText(
+            text: TextSpan(
+              children: [
+                TextSpan(
+                  text: "   Liked by ",
+                  style: TextStyle(
+                    fontWeight: FontWeight.normal,
+                    fontSize: 12,
+                  ),
+                ),
+                TextSpan(
+                  text: "Shade ",
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 12,
+                  ),
+                ),
+                TextSpan(
+                  text: "and ",
+                  style: TextStyle(
+                    fontWeight: FontWeight.normal,
+                    fontSize: 12,
+                  ),
+                ),
+                TextSpan(
+                  text: "others. ",
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 12,
+                  ),
+                )
+              ],
+            ),
+          ),
+          SizedBox(height: 5),
+          RichText(
+            text: TextSpan(
+              children: [
+                TextSpan(
+                  text: "   David_has",
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 12,
+                  ),
+                ),
+                TextSpan(
+                  text: " Awesome pic bro",
+                  style: TextStyle(
+                    fontWeight: FontWeight.normal,
+                    fontSize: 12,
+                  ),
+                )
+              ],
+            ),
+          ),
         ],
       ),
     );

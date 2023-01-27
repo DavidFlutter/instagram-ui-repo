@@ -13,11 +13,23 @@ class StoriesIcon extends StatelessWidget {
       child: Column(
         children: [
           Container(
+            padding: EdgeInsets.all(1),
+            child: Container(
+              height: 45,
+              width: 45,
+              decoration: BoxDecoration(
+                color: Colors.grey,
+                shape: BoxShape.circle,
+              ),
+            ),
             height: 45,
             width: 45,
             decoration: BoxDecoration(
-              color: Colors.grey,
+              color: Colors.white,
               shape: BoxShape.circle,
+              border: Border.all(
+                color: Colors.purple,
+              ),
             ),
           ),
           Text(user)

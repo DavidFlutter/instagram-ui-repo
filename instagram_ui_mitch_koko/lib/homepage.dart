@@ -20,7 +20,7 @@ class _HomePageState extends State<HomePage> {
     ShopPage(),
     AccountPage(),
   ];
-  var selectedIndex = 0;
+  var selectedIndex = 4;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
